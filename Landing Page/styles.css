@@ -1,0 +1,70 @@
+#browse:hover {
+    background-color: black;
+    color: #fff;
+}
+
+#contact:hover {
+    color: black;
+    background-color: #fff;
+}
+
+
+#row {
+    transition: all 3s ease-in-out;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+}
+
+#bgimg {
+    background: linear-gradient(rgba(26, 25, 25, 0.7), rgba(96, 101, 101, 0.7)),
+        url('/image/homebg.jpg') no-repeat center center/cover;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.nav-link {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .nav-link:hover {
+    transform: translateY(-3px);
+    /* Lifts the link slightly on hover */
+    /* color: #007bff !important; */
+    /* Bootstrap primary blue, adjust as needed */
+/* } */
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges the brand on hover */
+    transition: transform 0.3s ease-in-out;
+} */
+
+li {
+    color: #fff;
+}
+
+.hover-underline:hover {
+    text-decoration: underline !important;
+    color: #007bff !important;
+    /* Bootstrap primary blue */
+}
+
+.hover-scale:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+    color: #007bff !important;
+    /* Bootstrap primary blue */
+}
+
+.social-icons a {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.brand{
+    height: 100px;
+}
+

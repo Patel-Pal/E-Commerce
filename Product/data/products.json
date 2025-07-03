@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Apple MacBook Pro M4 Max",
+    "category": "laptop",
+    "price": 3199,
+    "image": "https://img-prd-pim.poorvika.com/cdn-cgi/image/width=500,height=500,quality=75/product/apple-macbook-pro-m4-max-chip-with-16-core-cpu-and-40-core-gpu-mac-os-laptop-16-2-inch-mx2w3hn-a-space-black-48gb-1tb-front-view.png",
+    "description": "Apple 2024 MacBook Pro Laptop with M4 Max chip, 16-core CPU, 40-core GPU, 48GB RAM, 1TB SSD. 16.2-inch Liquid Retina XDR Display, Space Black."
+  },
+  {
+    "id": 8,
+    "name": "Apple Watch Series 9",
+    "category": "watch",
+    "price": 399,
+    "image": "https://suprememobiles.in/cdn/shop/files/apple_watch_series_9.webp?v=1739796451&width=1946",
+    "description": "Apple Watch Series 9 [GPS 45mm] Smartwatch with Midnight Sport Band, Retina Display, Fitness Tracker, Heart Rate Monitor."
+  },
+  {
+    "id": 3,
+    "name": "HP Pavilion 15",
+    "category": "laptop",
+    "price": 749,
+    "image": "https://m.media-amazon.com/images/I/71lWuRFiCoL.jpg",
+    "description": "HP Pavilion 15 Laptop, 12th Gen Intel Core i5, 16GB RAM, 512GB SSD, 15.6-inch Full HD Display, Windows 11."
+  },
+  {
+    "id": 7,
+    "name": "Samsung Galaxy Watch 6",
+    "category": "watch",
+    "price": 299,
+    "image": "https://m.media-amazon.com/images/I/71sRBqqrOpL._UF1000,1000_QL80_.jpg",
+    "description": "Samsung Galaxy Watch 6 Bluetooth Smartwatch, 44mm AMOLED, Fitness & Health Tracker, Black."
+  },
+  {
+    "id": 4,
+    "name": " Samarth iPhone 15",
+    "category": "mobile",
+    "price": 1199,
+    "image": "https://m.media-amazon.com/images/I/71d7rfSl0wL._UF1000,1000_QL80_.jpg",
+    "description": "Apple iPhone 15 with A16 chip, 6.7-inch Super Retina XDR display, 128GB storage, Alice Blue."
+  },
+  {
+    "id": 2,
+    "name": "Dell XPS 13 Plus",
+    "category": "laptop",
+    "price": 1299,
+    "image": "https://media.croma.com/image/upload/v1715937615/Croma%20Assets/Computers%20Peripherals/Laptop/Images/260850_1_olxdsg.png",
+    "description": "Dell XPS 13 Plus Laptop - 13.4-inch UHD+ Touch Display, Intel Core i7, 16GB RAM, 512GB SSD, Windows 11, Silver."
+  },
+  {
+    "id": 6,
+    "name": "OnePlus 12R",
+    "category": "mobile",
+    "price": 599,
+    "image": "https://img-prd-pim.poorvika.com/product/Oneplus-12r-5g-cool-blue-256gb-16gb-ram-front-Back-View.png",
+    "description": "OnePlus 12R 5G, 6.78-inch AMOLED display, Snapdragon 8 Gen 2, 16GB RAM, 256GB Storage, Cool Blue."
+  },
+  {
+    "id": 5,
+    "name": "Samsung Galaxy S24 Ultra",
+    "category": "mobile",
+    "price": 1399,
+    "image": "https://img-prd-pim.poorvika.com/cdn-cgi/image/width=500,height=500,quality=75/product/Samsung-galaxy-s24-ultra-5g-titanium-gray-256gb-12gb-ram-Back-View.png",
+    "description": "Samsung Galaxy S24 Ultra 5G Smartphone, 6.8-inch QHD+ AMOLED display, Snapdragon 8 Gen 3, 12GB RAM, 512GB Storage, Phantom Black."
+  },
+  {
+    "id": 9,
+    "name": "Noise ColorFit Ultra 3",
+    "category": "watch",
+    "price": 69,
+    "image": "https://m.media-amazon.com/images/I/71Vx928Yx2L.jpg",
+    "description": "Noise ColorFit Ultra 3 Bluetooth Calling Smartwatch with AMOLED Display, 100+ Sports Modes, Metallic Frame, Jet Black."
+  }
+]

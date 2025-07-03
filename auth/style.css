@@ -1,0 +1,49 @@
+    body {
+      transition: background-color 0.5s ease; /* Smooth transition for background */
+    }
+
+    .card.dark-card {
+      background-color: #343a40; /* Darker background for the form card */
+      color: #f8f9fa; /* Light text color */
+      border: 1px solid #495057; /* Slightly lighter border */
+    }
+
+    .dark-card .form-control {
+      background-color: #495057; /* Darker input background */
+      color: #f8f9fa; /* Light text in inputs */
+      border-color: #6c757d; /* Lighter border for inputs */
+    }
+
+    .dark-card .form-control:focus {
+      background-color: #495057;
+      color: #f8f9fa;
+      border-color: #80bdff; /* Bootstrap's focus color */
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+    /* Animation for elements */
+    .animated-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0; /* Start hidden */
+    }
+
+    .animated-fade-in.delay-1 { animation-delay: 0.2s; }
+    .animated-fade-in.delay-2 { animation-delay: 0.4s; }
+    .animated-fade-in.delay-3 { animation-delay: 0.6s; }
+    .animated-fade-in.delay-4 { animation-delay: 0.8s; }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #btn:hover {
+    background-color: black;
+    color: #fff;
+}

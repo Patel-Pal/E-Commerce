@@ -1,0 +1,134 @@
+let products = [];
+
+$(document).ready(function () {
+
+    $.getJSON("data/products.json", function (data) {
+        products = data;
+        renderProducts("all");
+    });
+
+
+    // price Filter 
+    $("#priceFilter").on("change", function () {
+        const category = $(".nav-link.active").data("category") || "all";
+        const keyword = $("#searchInput").val().toLowerCase();
+        renderProducts(category, keyword); // Re-render with new price filter
+    });
+
+
+    // Handle category filter
+    $(".nav-link").on("click", function (e) {
+        e.preventDefault();
+        $(".nav-link").removeClass("active");
+        $(this).addClass("active");
+        const category = $(this).data("category");
+        const keyword = $("#searchInput").val().toLowerCase();
+        renderProducts(category, keyword);
+    });
+
+    // Handle live search
+    $("#searchInput").on("input", function () {
+        const keyword = $(this).val().toLowerCase();
+        const category = $(".nav-link.active").data("category") || "all";
+        renderProducts(category, keyword);
+    });
+
+    // Render products
+    function renderProducts(category = "all", keyword = "", currentPage = 1) {
+        let filtered = products;
+
+        // Category filter
+        if (category !== "all") {
+            filtered = filtered.filter(p => p.category === category);
+        }
+
+        // Keyword filter
+        if (keyword) {
+            filtered = filtered.filter(p => p.name.toLowerCase().includes(keyword));
+        }
+
+        // Price filter
+        const priceRange = $("#priceFilter").val();
+        if (priceRange !== "all") {
+            if (priceRange.includes("-")) {
+                const [min, max] = priceRange.split("-").map(Number);
+                filtered = filtered.filter(p => p.price >= min && p.price <= max);
+            } else {
+                const min = parseInt(priceRange);
+                filtered = filtered.filter(p => p.price >= min);
+            }
+        }
+
+        const itemsPerPage = 6;
+        const totalPages = Math.ceil(filtered.length / itemsPerPage);
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const paginatedItems = filtered.slice(start, end);
+
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        let html = "";
+
+        paginatedItems.forEach(product => {
+            const isInWishlist = wishlist.includes(product.id);
+            html += `
+            <div class="col-md-4 mb-4 cards">
+                <div class="card h-100 position-relative">
+                    <span class="position-absolute top-0 end-0 m-2" style="z-index: 1;">
+                        <button class="btn wishlist-btn border-0" data-id="${product.id}">
+                            <i class="bi ${isInWishlist ? 'bi-heart-fill' : 'bi-heart'} fs-4"></i>
+                        </button>
+                    </span>
+                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.name}</h5>
+                        <p class="card-text">$${product.price}</p>
+                        <div class="d-flex justify-content-between">
+                            <a href="product-detail.html?id=${product.id}" class="btn btn-outline-dark btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        });
+
+        $("#productList").html(html);
+
+        // Render pagination buttons
+        let paginationHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const isActive = i === currentPage
+            const activeClass = isActive ? "active" : "";
+            const textColor = isActive ? "text-white" : "text-dark";
+            const bgColor = isActive ? "bg-dark border-secondary" : "";
+            paginationHTML += `
+             <li class="page-item ${activeClass}">
+                    <a class="page-link mx-1 rounded ${textColor} ${bgColor}" href="#" data-page="${i}">${i}</a>
+            </li>
+        `;
+        }
+        $("#pagination").html(paginationHTML);
+
+        // Attach pagination click event
+        $(".page-link").off("click").on("click", function (e) {
+            e.preventDefault();
+            const page = parseInt($(this).data("page"));
+            renderProducts(category, keyword, page);
+        });
+
+        // Attach wishlist button click
+        $(".wishlist-btn").off("click").on("click", function () {
+            const id = parseInt($(this).data("id"));
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            if (wishlist.includes(id)) {
+                wishlist = wishlist.filter(item => item !== id);
+            } else {
+                wishlist.push(id);
+            }
+
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            renderProducts(category, keyword, currentPage); // Keep current page
+        });
+    }
+
+});
