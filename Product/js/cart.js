@@ -57,7 +57,7 @@
 
 let rawCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-$(document).ready(function(){
+
 
   // Ensure all items have id + qty
   let cart = rawCart.map(item => {
@@ -136,7 +136,7 @@ $(document).ready(function(){
 
     // $("#cartItems").html(html);
   });
-})
+  
 // Functions
 function removeFromCart(id) {
   cart = cart.filter(item => item.id !== id);

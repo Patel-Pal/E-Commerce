@@ -8,12 +8,42 @@ $(document).ready(function () {
     });
 
 
-    // price Filter 
-    $("#priceFilter").on("change", function () {
-        const category = $(".nav-link.active").data("category") || "all";
-        const keyword = $("#searchInput").val().toLowerCase();
-        renderProducts(category, keyword); // Re-render with new price filter
+    // Open Sidebar
+    let isSidebarOpen = false;
+
+    $("#openFilterSidebar").on("click", function () {
+        if (isSidebarOpen) {
+            $("#filterSidebar").fadeOut();
+            $("body").css("overflow", "auto");
+        } else {
+            $("#filterSidebar").fadeIn();
+            $("body").css("overflow", "hidden");
+        }
+        isSidebarOpen = !isSidebarOpen;
     });
+
+    // Close Sidebar
+    $("#closeSidebar").on("click", function () {
+        $("#filterSidebar").fadeOut();
+        $("body").css("overflow", "auto"); // Restore scroll
+        isSidebarOpen = false;
+    });
+
+
+
+    $("#advancedFilterForm").on("submit", function (e) {
+        e.preventDefault();
+
+        const selectedCategory = $("#filterCategory").val();
+        const selectedPrice = $("#filterPrice").val();
+        const keyword = $("#searchInput").val().toLowerCase();
+
+        $("#filterSidebar").fadeOut();
+        $("body").css("overflow", "auto");
+
+        renderProducts(selectedCategory, keyword, 1, selectedPrice);
+    });
+
 
 
     // Handle category filter
@@ -34,7 +64,8 @@ $(document).ready(function () {
     });
 
     // Render products
-    function renderProducts(category = "all", keyword = "", currentPage = 1) {
+    function renderProducts(category = "all", keyword = "", currentPage = 1, priceRange = "all") {
+
         let filtered = products;
 
         // Category filter
@@ -47,8 +78,7 @@ $(document).ready(function () {
             filtered = filtered.filter(p => p.name.toLowerCase().includes(keyword));
         }
 
-        // Price filter
-        const priceRange = $("#priceFilter").val();
+        // Price range filter
         if (priceRange !== "all") {
             if (priceRange.includes("-")) {
                 const [min, max] = priceRange.split("-").map(Number);
@@ -58,6 +88,7 @@ $(document).ready(function () {
                 filtered = filtered.filter(p => p.price >= min);
             }
         }
+
 
         const itemsPerPage = 6;
         const totalPages = Math.ceil(filtered.length / itemsPerPage);
@@ -133,8 +164,6 @@ $(document).ready(function () {
 
         });
     }
-
-
 
 
 
