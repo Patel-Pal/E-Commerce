@@ -50,12 +50,20 @@
                     <li class="nav-item px-2">
                         <a class="nav-link animate__animated animate__fadeInDown " href="/Product/cart.html">
                             <i class="fas fa-shopping-cart "></i>
+                            <span id="cartBadge"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
                             <!-- <span>Carts</span> -->
                         </a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link animate__animated animate__fadeInDown " href="/Product/wishlist.html">
                             <i class="fas fa-heart "></i>
+                            <span id="wishlistBadge"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
                             <!-- <span>Wishlist</span> -->
                         </a>
                     </li>
@@ -71,6 +79,8 @@
         </div>
     </nav>
 
+    <script src="/Header/script.js"></script>
+     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

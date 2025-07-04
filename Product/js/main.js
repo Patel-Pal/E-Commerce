@@ -128,7 +128,15 @@ $(document).ready(function () {
 
             localStorage.setItem("wishlist", JSON.stringify(wishlist));
             renderProducts(category, keyword, currentPage); // Keep current page
+
+            location.reload()
+
         });
     }
+
+
+
+
+
 
 });

@@ -39,6 +39,8 @@
             if (!cart.includes(id)) cart.push(id);
             localStorage.setItem("cart", JSON.stringify(cart));
             alert("Product added to cart!");
+             
+            location.reload()
         }
 
         // Add to Wishlist
@@ -47,4 +49,12 @@
             if (!wishlist.includes(id)) wishlist.push(id);
             localStorage.setItem("wishlist", JSON.stringify(wishlist));
             alert("Product added to wishlist!");
+            location.reload()
+
         }
+
+
+
+
+        
+
