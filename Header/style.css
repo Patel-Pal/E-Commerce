@@ -23,16 +23,16 @@
   font-size: 1rem;
 } */
 
-
+/* 
 @media (max-width: 767px) {
   .nav-item {
     /* background-color: red; */
     /* border: 1px solid white; */
-  }
+  /* } */
 
-  .nav-link span {
-    display: block;
+  /* .nav-link span { */
+    /* display: block; */
     /* background: red; */
     /* color: #f8f2f2; */
-  }
-}
+  /* } */
+/* } */

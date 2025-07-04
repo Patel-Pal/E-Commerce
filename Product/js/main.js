@@ -90,7 +90,7 @@ $(document).ready(function () {
         }
 
 
-        const itemsPerPage = 6;
+        const itemsPerPage = 8;
         const totalPages = Math.ceil(filtered.length / itemsPerPage);
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
@@ -102,23 +102,22 @@ $(document).ready(function () {
         paginatedItems.forEach(product => {
             const isInWishlist = wishlist.includes(product.id);
             html += `
-            <div class="col-md-4 mb-4 cards">
-                <div class="card h-100 position-relative">
-                    <span class="position-absolute top-0 end-0 m-2" style="z-index: 1;">
-                        <button class="btn wishlist-btn border-0" data-id="${product.id}">
-                            <i class="bi ${isInWishlist ? 'bi-heart-fill' : 'bi-heart'} fs-4"></i>
-                        </button>
+            <div class="col-6 col-md-3 mb-3 cards">
+                <div class="card h-100 position-relative p-2">
+                    <span class="position-absolute top-0 end-0 m-1" style="z-index: 1;">
+                    <button class="btn wishlist-btn border-0 p-0" data-id="${product.id}">
+                        <i class="bi ${isInWishlist ? 'bi-heart-fill' : 'bi-heart'} fs-5 text-danger"></i>
+                    </button>
                     </span>
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <p class="card-text">$${product.price}</p>
-                        <div class="d-flex justify-content-between">
-                            <a href="product-detail.html?id=${product.id}" class="btn btn-outline-dark btn-sm">View Details</a>
-                        </div>
+                    <img src="${product.image}" class="card-img-top" alt="${product.name}" style="height: 150px; object-fit: contain;">
+                    <div class="card-body p-2">
+                    <h6 class="card-title mb-1">${product.name}</h6>
+                    <p class="card-text mb-2 small">$${product.price}</p>
+                    <a href="product-detail.html?id=${product.id}" class="btn btn-outline-dark btn-sm w-100">View</a>
                     </div>
                 </div>
             </div>
+
         `;
         });
 

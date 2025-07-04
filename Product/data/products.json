@@ -70,5 +70,173 @@
     "price": 69,
     "image": "https://m.media-amazon.com/images/I/71Vx928Yx2L.jpg",
     "description": "Noise ColorFit Ultra 3 Bluetooth Calling Smartwatch with AMOLED Display, 100+ Sports Modes, Metallic Frame, Jet Black."
+  },
+  {
+    "id": 10,
+    "name": "Realme GT 6",
+    "category": "mobile",
+    "price": 549,
+    "image": "https://www.primemobilestore.com/wp-content/uploads/2024/09/gt6.png",
+    "description": "Realme GT 6 5G with Snapdragon 8s Gen 3, 12GB RAM, 256GB Storage, 6.78” AMOLED Display, Silver."
+  },
+  {
+    "id": 11,
+    "name": "Asus Zenbook Duo 2024",
+    "category": "laptop",
+    "price": 1699,
+    "image": "https://dlcdnwebimgs.asus.com/gain/b7e4e95b-bd2d-4fb4-afbe-c7d396a2db3d/",
+    "description": "Asus Zenbook Duo OLED 2024 with Intel Core Ultra 9, Dual 14-inch Display, 32GB RAM, 1TB SSD."
+  },
+  {
+    "id": 12,
+    "name": "Fire-Boltt Invincible Plus",
+    "category": "watch",
+    "price": 89,
+    "image": "https://www.fireboltt.com/cdn/shop/products/Invincible-PlusArtboard-23_1080x.png?v=1678184824",
+    "description": "Fire-Boltt Invincible Plus Smartwatch, 1.43” AMOLED, Bluetooth Calling, 300+ Sports Modes, Black."
+  },
+  {
+    "id": 13,
+    "name": "Motorola Edge 50 Pro",
+    "category": "mobile",
+    "price": 429,
+    "image": "https://motorolaroe.vtexassets.com/arquivos/ids/157969/motorola-edge-50-pro-PDP-ecomm-render-color5-5-.png?v=638653952985730000",
+    "description": "Motorola Edge 50 Pro 5G, 6.7-inch pOLED Display, Snapdragon 7 Gen 3, 8GB RAM, 128GB Storage."
+  },
+  {
+    "id": 14,
+    "name": "HP Spectre x360",
+    "category": "laptop",
+    "price": 1449,
+    "image": "https://m.media-amazon.com/images/I/71-He6IYBKL.jpg",
+    "description": "HP Spectre x360 14-inch OLED Laptop, Intel Evo Core i7, 16GB RAM, 1TB SSD, Windows 11."
+  },
+  {
+    "id": 15,
+    "name": "Fastrack Limitless FS1",
+    "category": "watch",
+    "price": 69,
+    "image": "https://m.media-amazon.com/images/I/71wRh+9yqrL._UF1000,1000_QL80_.jpg",
+    "description": "Fastrack FS1 Limitless Smartwatch with 1.95” UltraVU Display, Bluetooth Calling, 100+ Sports Modes."
+  },
+  {
+    "id": 16,
+    "name": "iQOO Z9 5G",
+    "category": "mobile",
+    "price": 249,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMY4m1Gv9NCPTrE3Ob3jSp0xBszBNXtjLZ6Q&s",
+    "description": "iQOO Z9 5G, MediaTek Dimensity 7200, 8GB RAM, 128GB Storage, AMOLED Display, Graphene Cooling."
+  },
+  {
+    "id": 17,
+    "name": "Lenovo Yoga Slim 7i",
+    "category": "laptop",
+    "price": 1149,
+    "image": "https://p2-ofp.static.pub//fes/cms/2025/03/27/rgtg7vo2a5uyj14x0gsy3hgrz7tyez748029.png",
+    "description": "Lenovo Yoga Slim 7i, Intel Core i7, 16GB RAM, 1TB SSD, 14-inch OLED Display, Windows 11."
+  },
+  {
+    "id": 18,
+    "name": "boAt Lunar Peak",
+    "category": "watch",
+    "price": 49,
+    "image": "https://www.boat-lifestyle.com/cdn/shop/files/Artboard1_8f53218a-8c49-43d1-8d20-1e638e28b29e.png?v=1698825866",
+    "description": "boAt Lunar Peak Smartwatch, 1.45” AMOLED, BT Calling, 100+ Watch Faces, Multiple Sports Modes."
+  },
+  {
+    "id": 19,
+    "name": "Xiaomi 14 Civi",
+    "category": "mobile",
+    "price": 529,
+    "image": "https://m.media-amazon.com/images/I/71ceEkr+QQL._UF1000,1000_QL80_.jpg",
+    "description": "Xiaomi 14 Civi, Snapdragon 8s Gen 3, 12GB RAM, 512GB Storage, Leica Cameras, AMOLED Display."
+  },
+  {
+    "id": 20,
+    "name": "Dell Inspiron 16",
+    "category": "laptop",
+    "price": 899,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjvMVhsqyA-dmMySE2vTQQDgFR2tfiKXIzzg&s",
+    "description": "Dell Inspiron 16 Laptop, Intel Core i5 13th Gen, 16GB RAM, 512GB SSD, 16-inch FHD+, Windows 11."
+  },
+  {
+    "id": 21,
+    "name": "Noise Pulse 2 Max",
+    "category": "watch",
+    "price": 39,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsqwMwmGggKqmaPZkpolcpTIE-nO6nsHd69w&s",
+    "description": "Noise Pulse 2 Max with 1.85” Display, BT Calling, 100 Sports Modes, IP68 Waterproof, Black Strap."
+  },
+  {
+    "id": 22,
+    "name": "Infinix GT 20 Pro",
+    "category": "mobile",
+    "price": 229,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW8qYujUxuRsie3-TWKqq9YSix8Ghm5Z7qHQ&s",
+    "description": "Infinix GT 20 Pro, Dimensity 8200, 8GB RAM, 256GB Storage, 144Hz AMOLED, Cyber Mecha Design."
+  },
+  {
+    "id": 23,
+    "name": "Acer Swift Go OLED",
+    "category": "laptop",
+    "price": 999,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5rjro5-TiG9XqGqTRRAwyg2U5dCkbUVFvZQ&s",
+    "description": "Acer Swift Go OLED, Intel Core Ultra 5, 16GB RAM, 1TB SSD, 14-inch 2.8K OLED Display, Thin & Light."
+  },
+  {
+    "id": 24,
+    "name": "Crossbeats Ignite S5",
+    "category": "watch",
+    "price": 59,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkkqEZX9ZzgaHvMUCgS08zT2hreZEZuGcDug&s",
+    "description": "Crossbeats Ignite S5, 1.96” AMOLED, Always-On Display, BT Calling, AI Voice Assistant."
+  },
+  {
+    "id": 25,
+    "name": "Google Pixel 8",
+    "category": "mobile",
+    "price": 699,
+    "image": "https://images-cdn.ubuy.co.in/651efaa19bf33762de6dc7a3-google-pixel-8-unlocked-android.jpg",
+    "description": "Google Pixel 8, Tensor G3, 6.2-inch Actua Display, 8GB RAM, 128GB Storage, Android 14."
+  },
+  {
+    "id": 26,
+    "name": "MSI Modern 14",
+    "category": "laptop",
+    "price": 649,
+    "image": "https://asset.msi.com/resize/image/global/product/product_1669882648d8be33b846e1a7fe4b32c4a0e48e1d31.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+    "description": "MSI Modern 14 Laptop, Intel Core i5, 16GB RAM, 512GB SSD, 14-inch FHD, Lightweight Build."
+  },
+  {
+    "id": 27,
+    "name": "Fire-Boltt Phoenix AMOLED",
+    "category": "watch",
+    "price": 79,
+    "image": "https://www.fireboltt.com/cdn/shop/files/phoenix-amoled-black_1_400x.png?v=1691728590",
+    "description": "Fire-Boltt Phoenix AMOLED, 1.43-inch Display, 100+ Sports Modes, Health Suite, Stylish Black."
+  },
+  {
+    "id": 28,
+    "name": "Vivo V30 Pro",
+    "category": "mobile",
+    "price": 599,
+    "image": "https://m.media-amazon.com/images/I/51SnUmyhayL.jpg",
+    "description": "Vivo V30 Pro 5G, MediaTek Dimensity 8200, 8GB RAM, 256GB, Zeiss Optics, 3D Curved Display."
+  },
+  {
+    "id": 29,
+    "name": "LG Gram 17",
+    "category": "laptop",
+    "price": 1599,
+    "image": "https://m.media-amazon.com/images/I/713l92BGRwL.jpg",
+    "description": "LG Gram 17 Laptop, Intel Core i7 13th Gen, 16GB RAM, 1TB SSD, Ultra Lightweight, 17-inch WQXGA."
+  },
+  {
+    "id": 30,
+    "name": "Boult Drift 2",
+    "category": "watch",
+    "price": 44,
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/smartwatch/e/y/n/-original-imags32ykxgzykd6.jpeg?q=90&crop=false",
+    "description": "Boult Drift 2, 1.85” Display, Bluetooth Calling, 120+ Sports Modes, SpO2, Black Strap."
   }
 ]

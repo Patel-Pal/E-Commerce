@@ -1,6 +1,14 @@
 $(document).ready(function () {
   updateCartBadge();
   updateWishlistBadge();
+
+
+ $(".navbar-nav .nav-link").on("click", function () {
+    if ($(".navbar-toggler").is(":visible")) {
+      $("#abc").collapse("hide");
+    }
+  });
+
 });
 
 
