@@ -70,10 +70,6 @@ $("input[type=email]").on("input", function () {
 
 
 
-
-
-
-
 // Fetch current user from localStorage
 let currentUser = localStorage.getItem("loggedInUser") || "";
 $("#fullName").val(currentUser); // autofill

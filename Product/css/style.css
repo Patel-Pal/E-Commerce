@@ -10,6 +10,19 @@
     color: #010710;
     transform: translateY(-2px);
 }
+#filterSidebar {
+      transition: all 0.2s ease;
+      border-left: 1px solid #dee2e6;
+    }
+
+    #filterSidebar.show {
+      transform: translateX(0%);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    #filterSidebar.transition {
+      transition: transform 0.2s ease-in-out;
+    }
 
 @media (max-width: 768px) {
     .custom-header {

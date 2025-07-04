@@ -1,17 +1,17 @@
-  // Get the product ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get("id");
+// Get the product ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get("id");
 
-        // Fetch the product data
-        $.getJSON("data/products.json", function (products) {
-            const product = products.find(p => p.id == productId);
+// Fetch the product data
+$.getJSON("data/products.json", function (products) {
+    const product = products.find(p => p.id == productId);
 
-            if (!product) {
-                $("#productDetail").html("<div class='alert alert-danger'>Product not found.</div>");
-                return;
-            }
+    if (!product) {
+        $("#productDetail").html("<div class='alert alert-danger'>Product not found.</div>");
+        return;
+    }
 
-            const html = `
+    const html = `
                     <div class="row">
                         <div class="col-md-6">
                             <img src="${product.image}" class="img-fluid rounded" alt="${product.name}">
@@ -30,31 +30,33 @@
                     `;
 
 
-            $("#productDetail").html(html);
-        });
+    $("#productDetail").html(html);
+});
 
-        // Add to Cart
-        function addToCart(id) {
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-            if (!cart.includes(id)) cart.push(id);
-            localStorage.setItem("cart", JSON.stringify(cart));
-            alert("Product added to cart!");
-             
-            location.reload()
-        }
+// Add to Cart
+function addToCart(id) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (!cart.includes(id)) cart.push(id);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    // showMessage("Product added to cart!");
 
-        // Add to Wishlist
-        function addToWishlist(id) {
-            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-            if (!wishlist.includes(id)) wishlist.push(id);
-            localStorage.setItem("wishlist", JSON.stringify(wishlist));
-            alert("Product added to wishlist!");
-            location.reload()
+    location.reload()
+}
 
-        }
+// Add to Wishlist
+function addToWishlist(id) {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    if (!wishlist.includes(id)) wishlist.push(id);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    // showMessage("Product added to wishlist!");
+    location.reload()
 
-
+}
 
 
-        
+
+
+
+
+
 

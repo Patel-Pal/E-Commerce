@@ -11,20 +11,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link src="/Product/css/style.css">
 
-  <style>
-    #filterSidebar {
-      transition: all 0.2s ease;
-      border-left: 1px solid #dee2e6;
-    }
-     #filterSidebar.show {
-    transform: translateX(0%);
-    transition: transform 0.2s ease-in-out;
-  }
 
-  #filterSidebar.transition {
-    transition: transform 0.2s ease-in-out;
-  }
-  </style>
 
 </head>
 
@@ -33,7 +20,9 @@
   <div id="header" class="sticky-top"></div>
 
   <div class="px-5 py-5 bg-light">
-    <h2 class="mb-4">Our Products</h2>
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">
+      Products
+    </h1>
 
     <!-- Category Tabs -->
     <nav class="navbar navbar-expand-lg navbar-light py-3">
@@ -47,7 +36,10 @@
 
 
         <!-- Filter Button -->
-        <button class="btn btn-dark" id="openFilterSidebar">Filter</button>
+        <!-- <button class="btn btn-dark" id="openFilterSidebar">Filter</button> -->
+        <button id="openFilterSidebar" class="btn btn-outline-dark">
+          <i class="bi bi-funnel-fill"></i> Filter
+        </button>
 
         <!-- Sidebar Filter Panel -->
         <div id="filterSidebar" class="position-fixed top-0 end-0  bg-light shadow p-4 rounded-start "

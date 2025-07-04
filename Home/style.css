@@ -6,3 +6,11 @@
     overflow: hidden;
     background-attachment: fixed;
 }
+
+#row {
+    transition: all 3s ease-in-out;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+}

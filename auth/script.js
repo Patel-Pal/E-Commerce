@@ -7,7 +7,12 @@ $(document).ready(function () {
     const password = $('#loginPassword').val().trim();
 
     if (!username || !password) {
-      alert("Please fill all fields");
+      // alert("Please fill all fields");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please fill all fields',
+      });
       return;
     }
 
@@ -20,15 +25,24 @@ $(document).ready(function () {
         localStorage.setItem('loggedInUser', username);
         window.location.href = '/Home/home.html';
       } else {
-        alert("Incorrect password.");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Incorrect password.',
+        });
       }
     } else {
       // New user: save and login
       users.push({ username, password });
       localStorage.setItem('users', JSON.stringify(users));
       localStorage.setItem('loggedInUser', username);
-      alert("Welcome! Account created and logged in.");
-      window.location.href = '/Home/home.html';
+      Swal.fire({
+        icon: 'success',
+        title: 'Welcome!',
+        text: 'You have been registered and logged in.',
+      }).then(() => {
+        window.location.href = '/Home/home.html';
+      });
     }
   });
 
@@ -37,8 +51,13 @@ $(document).ready(function () {
     const user = localStorage.getItem('loggedInUser');
 
     if (!user) {
-      alert("Please login first.");
-      window.location.href = '/auth/login.html';
+      Swal.fire({
+        icon: 'warning',
+        title: 'Access Denied',
+        text: 'Please login first.',
+      }).then(() => {
+        window.location.href = '/auth/login.html';
+      });
       return;
     }
 
@@ -58,4 +77,9 @@ $(document).ready(function () {
       window.location.href = '/login.html';
     });
   }
+
+
+  
+ 
+  
 });
