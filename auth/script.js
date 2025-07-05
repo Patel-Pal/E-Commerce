@@ -23,7 +23,7 @@ $(document).ready(function () {
       if (existingUser.password === password) {
         // Successful login
         localStorage.setItem('loggedInUser', username);
-        window.location.href = '/Home/home.html';
+        window.location.href = '/Home/Home.html';
       } else {
         Swal.fire({
           icon: 'error',
@@ -41,7 +41,7 @@ $(document).ready(function () {
         title: 'Welcome!',
         text: 'You have been registered and logged in.',
       }).then(() => {
-        window.location.href = '/Home/home.html';
+        window.location.href = '/Home/Home.html';
       });
     }
   });
