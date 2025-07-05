@@ -177,11 +177,7 @@ $(".place-order").on("click", function () {
 });
 
 
-const confettiCanvas = document.getElementById('confetti-canvas');
-            const myConfetti = confetti.create(confettiCanvas, {
-                resize: true,
-                useWorker: true,
-            });
+
 
 $("#confirmOrderBtn").on("click", function () {
     // Clear cart from localStorage
