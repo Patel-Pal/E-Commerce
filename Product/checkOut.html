@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="/Product/css/checkOutstyle.css">
-   
+
+  
 </head>
 
 <body>
@@ -44,7 +46,7 @@
                             <div class="mb-2">
                                 <label class="form-label">Full Name <super class="text-danger fs-5">*</super></label>
                                 <input type="text" class="form-control" id="fullName" placeholder="John Doe">
-                                 <span id="nameError" class="text-danger small"></span>
+                                <span id="nameError" class="text-danger small"></span>
                             </div>
                             <div class="mb-2">
                                 <label class="form-label">Phone Number <super class="text-danger fs-5">*</super></label>
@@ -59,7 +61,8 @@
                             </div>
 
                             <div class="mb-2">
-                                <label class="form-label">EMAIL ADDRESS <super class="text-danger fs-5">*</super></label>
+                                <label class="form-label">EMAIL ADDRESS <super class="text-danger fs-5">*</super>
+                                </label>
                                 <input type="email" class="form-control" id="email" placeholder="Email address">
                                 <span id="emailError" class="text-danger small"></span>
                             </div>
@@ -81,10 +84,10 @@
 
                         <button class="place-order">PLACE ORDER</button>
 
-                      
+
                     </div>
 
-                    
+
                     <!-- Replace hardcoded product section with dynamic content -->
                     <div class="col-md-5 mt-4 mt-md-0">
                         <div class="border p-3">
@@ -115,7 +118,7 @@
                     <!-- Dynamically generated bill will go here -->
                 </div>
                 <div class="modal-footer">
-                    <button id="confirmOrderBtn" class="btn btn-outline-secondary">Confirm</button>
+                    <button id="confirmOrderBtn" class=" confettiButton btn btn-outline-secondary ">Confirm</button>
                 </div>
             </div>
         </div>
@@ -124,13 +127,18 @@
 
     <div id="footer"></div>
 
+
     <!-- Bootstrap JS -->
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/checkout.js"></script>
     <script src="/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 
 </html>

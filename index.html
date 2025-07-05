@@ -102,20 +102,26 @@
       <div class="row g-4 mb-5" id="row">
         <div class="col-12 col-md-4 cards">
           <div class="border rounded-4 shadow-sm p-3 bg-light animate__animated animate__zoomIn">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvh-j7HsTHJ8ZckknAoiZMx9VcFmsFkv72g&s"
-              class="img-fluid" alt="Brand 1">
+            <a href="/auth/login.html">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvh-j7HsTHJ8ZckknAoiZMx9VcFmsFkv72g&s"
+                class="img-fluid" alt="Brand 1">
+            </a>
           </div>
         </div>
         <div class="col-12 col-md-4 cards">
           <div class="border rounded-4 shadow-sm p-3 bg-light animate__animated animate__zoomIn">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3qA2q06CGBiyE0j7cCg5lWlIRmENV_p6P7Q&s"
-              class="img-fluid" alt="Brand 2">
+            <a href="/auth/login.html">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3qA2q06CGBiyE0j7cCg5lWlIRmENV_p6P7Q&s"
+                class="img-fluid" alt="Brand 2">
+            </a>
           </div>
         </div>
         <div class="col-12 col-md-4 cards">
           <div class="border rounded-4 shadow-sm p-3 bg-light animate__animated animate__zoomIn">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4jw5FDSFU8Of08ih7_EmP6YBnoV9HP-Sipg&s"
-              class="img-fluid" alt="Brand 3">
+            <a href="/auth/login.html">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4jw5FDSFU8Of08ih7_EmP6YBnoV9HP-Sipg&s"
+                class="img-fluid" alt="Brand 3">
+            </a>
           </div>
         </div>
       </div>
@@ -126,9 +132,11 @@
       <div class="row g-4" id="row">
         <div class="col-md-4 cards">
           <div class="card h-100 border border-2 rounded-5 shadow-sm animate__animated animate__fadeInLeft">
-            <img
-              src="https://www.imagineonline.store/cdn/shop/files/iPhone_15_Green_PDP_Image_Position-1__en-IN.jpg?v=1694605400&width=823"
-              class="card-img-top rounded-top-5" alt="Product 1">
+            <a href="/auth/login.html">
+              <img
+                src="https://www.imagineonline.store/cdn/shop/files/iPhone_15_Green_PDP_Image_Position-1__en-IN.jpg?v=1694605400&width=823"
+                class="card-img-top rounded-top-5" alt="Product 1">
+            </a>
             <div class="card-body">
               <h5 class="card-title">Apple</h5>
               <p class="card-text">iphone 16</p>
@@ -141,8 +149,10 @@
 
         <div class="col-md-4 cards">
           <div class="card h-100 border border-2 rounded-5 shadow-sm animate__animated animate__fadeInUp">
-            <img src="https://cdn.mos.cms.futurecdn.net/ZJZztnnZP9y8GYLvnKc6SH.jpg" class="card-img-top rounded-top-5"
-              alt="Product 2">
+            <a href="/auth/login.html">
+              <img src="https://cdn.mos.cms.futurecdn.net/ZJZztnnZP9y8GYLvnKc6SH.jpg" class="card-img-top rounded-top-5"
+                alt="Product 2">
+            </a>
             <div class="card-body">
               <h5 class="card-title">Sumsung</h5>
               <p class="card-text">Galaxy S25</p>
@@ -155,8 +165,10 @@
 
         <div class="col-md-4 cards">
           <div class="card h-100 border border-2 rounded-5 shadow-sm animate__animated animate__fadeInRight">
-            <img src="https://m.media-amazon.com/images/I/51lnSua23HL._UF894,1000_QL80_.jpg"
-              class="card-img-top rounded-top-5" alt="Product 3">
+            <a href="/auth/login.html">
+              <img src="https://m.media-amazon.com/images/I/51lnSua23HL._UF894,1000_QL80_.jpg"
+                class="card-img-top rounded-top-5" alt="Product 3">
+            </a>
             <div class="card-body">
               <h5 class="card-title">OnePlus </h5>
               <p class="card-text">Nord 2T 5G</p>
@@ -173,26 +185,34 @@
 
   <footer class="py-4 bg-dark text-white">
     <div class="container">
-      <div class="row ">
-
-        <!-- CodeX (Dropdown on Mobile) -->
-        <div class="col-md-5 ">
-          <!-- Dropdown for mobile -->
-          <div class="dropdown d-md-none">
-            <button class="btn btn-dark w-100 dropdown-toggle d-flex justify-content-between align-items-center"
-              type="button" data-bs-toggle="dropdown">
-              TechNova</span>
-            </button>
-
-            <!-- This will toggle on click -->
-            <div class="dropdown-menu dropdown-menu-dark p-3 text-white-50">
-              <p class="mb-0">
-                Why settle for less when you can upgrade your life with cutting-edge electronics at unbeatable prices?
-                At TecNova, we believe that smart choices start with smart shopping.
-              </p>
+      <div class="row">
+        <!-- TechNova (Accordion on Mobile) -->
+        <div class="col-md-5">
+          <!-- Accordion for mobile -->
+          <div class="d-md-none">
+            <div class="accordion" id="techNovaAccordion-{uniqueSuffix}">
+              <div class="accordion-item bg-dark border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button bg-dark text-white d-flex justify-content-between align-items-center w-100 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#techNovaCollapse-{uniqueSuffix}"
+                    aria-expanded="false" aria-controls="techNovaCollapse-{uniqueSuffix}">
+                    TechNova
+                  </button>
+                </h2>
+                <div id="techNovaCollapse-{uniqueSuffix}" class="accordion-collapse collapse"
+                  data-bs-parent="#techNovaAccordion-{uniqueSuffix}">
+                  <div class="accordion-body text-white-50">
+                    <p class="mb-0">
+                      Why settle for less when you can upgrade your life with cutting-edge electronics at unbeatable
+                      prices?
+                      At TecNova, we believe that smart choices start with smart shopping.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
 
           <!-- Visible only on desktop -->
           <div class="d-none d-md-block">
@@ -205,28 +225,40 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="col-md-3 ">
-          <div class="dropdown d-md-none">
-            <button class="btn btn-dark w-100 dropdown-toggle d-flex justify-content-between align-items-center"
-              type="button" data-bs-toggle="dropdown">
-              <span><i class="fas fa-link me-2"></i> Quick Links</span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-dark w-100 p-3">
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white-50 text-decoration-none mb-4">
-                    <i class="fas fa-home me-2"></i> Home</a>
-                </li>
-                <li><a href="/auth/login.html" class="text-white-50 text-decoration-none mb-1">
-                    <i class="fas fa-sign-in-alt me-1"></i> Login</a>
-                </li>
-              </ul>
+        <div class="col-md-3">
+          <div class="d-md-none">
+            <div class="accordion" id="quickLinksAccordion-{uniqueSuffix}">
+              <div class="accordion-item bg-dark border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button bg-dark text-white d-flex justify-content-between align-items-center w-100 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#quickLinksCollapse-{uniqueSuffix}"
+                    aria-expanded="false" aria-controls="quickLinksCollapse-{uniqueSuffix}">
+                    <span><i class="fas fa-link me-2"></i> Quick Links</span>
+                  </button>
+                </h2>
+                <div id="quickLinksCollapse-{uniqueSuffix}" class="accordion-collapse collapse"
+                  data-bs-parent="#quickLinksAccordion-{uniqueSuffix}">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0">
+                      <li><a href="/auth/login.html" class="text-white-50 text-decoration-none mb-1">
+                          <i class="fas fa-home me-2"></i> Home</a>
+                      </li>
+                      <li><a href="/auth/login.html" class="text-white-50 text-decoration-none mb-1">
+                          <i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="d-none d-md-block">
             <h5>Quick Links</h5>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-white-50 text-decoration-none mb-1">
+              <li><a href="/auth/login.html" class="text-white-50 text-decoration-none mb-1">
                   <i class="fas fa-home me-2"></i> Home</a>
               </li>
               <li><a href="/auth/login.html" class="text-white-50 text-decoration-none mb-1">
@@ -238,20 +270,36 @@
 
         <!-- Follow Us -->
         <div class="col-md-4 mb-4">
-          <div class="dropdown d-md-none">
-            <button class="btn btn-dark w-100 dropdown-toggle d-flex justify-content-between align-items-center"
-              type="button" data-bs-toggle="dropdown">
-              <span><i class="fas fa-share-alt me-2"></i> Follow Us</span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-dark p-3 w-100">
-              <div class="mb-2">
-                <a href="#" class="text-white-50 me-3 fs-4"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-white-50 me-3 fs-4"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white-50 me-3 fs-4"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white-50 me-3 fs-4"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="text-white-50 fs-4"><i class="fab fa-linkedin"></i></a>
+          <div class="d-md-none">
+            <div class="accordion" id="followUsAccordion-{uniqueSuffix}">
+              <div class="accordion-item bg-dark border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button bg-dark text-white d-flex justify-content-between align-items-center w-100 collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#followUsCollapse-{uniqueSuffix}"
+                    aria-expanded="false" aria-controls="followUsCollapse-{uniqueSuffix}">
+                    <span><i class="fas fa-share-alt me-2"></i> Follow Us</span>
+                  </button>
+                </h2>
+                <div id="followUsCollapse-{uniqueSuffix}" class="accordion-collapse collapse"
+                  data-bs-parent="#followUsAccordion-{uniqueSuffix}">
+                  <div class="accordion-body">
+                    <div class="mb-2">
+                      <a href="https://www.facebook.com/" target="_blank" class="text-white-50 me-3 fs-4"><i
+                          class="fab fa-facebook"></i></a>
+                      <a href="https://x.com/?lang=en" target="_blank" class="text-white-50 me-3 fs-4"><i
+                          class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com/" target="_blank" class="text-white-50 me-3 fs-4"><i
+                          class="fab fa-instagram"></i></a>
+                      <a href="https://www.youtube.com/" target="_blank" class="text-white-50 me-3 fs-4"><i
+                          class="fab fa-youtube"></i></a>
+                      <a href="https://in.linkedin.com/" target="_blank" class="text-white-50 fs-4"><i
+                          class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p class="text-white-50">Stay connected for the latest updates and tutorials!</p>
+                  </div>
+                </div>
               </div>
-              <p class="text-white-50">Stay tutorials!</p>
             </div>
           </div>
 
@@ -269,7 +317,7 @@
               <a href="https://in.linkedin.com/" target="_blank" class="text-white-50 fs-4"><i
                   class="fab fa-linkedin"></i></a>
             </div>
-            <p class="text-white-50">Stay tutorials!</p>
+            <p class="text-white-50">Stay connected for the latest updates and tutorials!</p>
           </div>
         </div>
       </div>
@@ -278,7 +326,7 @@
       <br>
       <div class="row">
         <div class="col-12 text-center">
-          <p class="text-white-50 mb-0">&copy; 2025 TechNova. All rights reserved.</p>
+          <p class="text-white-50 mb-0">© 2025 TechNova. All rights reserved.</p>
         </div>
       </div>
     </div>
