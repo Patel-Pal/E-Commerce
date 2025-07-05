@@ -22,24 +22,36 @@
       <a class="navbar-brand animate__animated animate__fadeInLeft mx-5" href="#">
         <strong class="fs-4">TechNova</strong>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+
+
+
+      <!--toggle button-->
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      </button> -->
+
+
+
+      <div class="d-flex">
+        <ul class="navbar-nav flex-row align-items-center">
           <li class="nav-item px-2">
-            <a class="nav-link animate__animated animate__fadeInDown" aria-current="page" href="#">
-              <i class="fas fa-home me-1"></i> Home
+            <a class="nav-link animate__animated animate__fadeInDown d-flex align-items-center" href="#">
+              <i class="fas fa-home me-1 fs-5 fs-md-4"></i>
+              <span class="d-none d-md-inline">Home</span>
             </a>
           </li>
           <li class="nav-item px-2">
-            <a class="nav-link animate__animated animate__fadeInDown " href="/auth/login.html">
-              <i class="fas fa-sign-in-alt me-1"></i> Login
+            <a class="nav-link animate__animated animate__fadeInDown d-flex align-items-center" href="/auth/login.html">
+              <i class="fas fa-sign-in-alt me-1 fs-5 fs-md-4"></i>
+              <span class="d-none d-md-inline">Login</span>
             </a>
           </li>
         </ul>
       </div>
+
+
+
     </div>
   </nav>
 
@@ -202,7 +214,7 @@
             <div class="dropdown-menu dropdown-menu-dark w-100 p-3">
               <ul class="list-unstyled mb-0">
                 <li><a href="#" class="text-white-50 text-decoration-none mb-4">
-                  <i class="fas fa-home me-2"></i> Home</a>
+                    <i class="fas fa-home me-2"></i> Home</a>
                 </li>
                 <li><a href="/auth/login.html" class="text-white-50 text-decoration-none mb-1">
                     <i class="fas fa-sign-in-alt me-1"></i> Login</a>
@@ -242,7 +254,7 @@
               <p class="text-white-50">Stay tutorials!</p>
             </div>
           </div>
-          
+
           <div class="d-none d-md-block">
             <h5>Follow Us</h5>
             <div class="social-icons mb-2">

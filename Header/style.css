@@ -48,14 +48,20 @@
   line-height: 1;
 }
 
+.cartBadge, .wishlistBadge {
+  font-size: 0.6rem;
+  padding: 0.3em 0.4em;
+}
+
 @media (max-width: 576px) {
   #cartBadge {
-    top: -5px;
+    top: -7px;
     left: 50%;
     transform: translateX(-50%);
+    border: 2px solid beige;
   }
   #wishlistBadge {
-    top: -5px;
+    top: -7px;
     left: 50%;
     transform: translateX(-50%);
   }

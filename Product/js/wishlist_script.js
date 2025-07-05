@@ -12,27 +12,38 @@
         const product = products.find(p => p.id == id);
         if (product) {
           html += `
-            <div class="col-md-3 mb-3">
-                <div class="card h-100 shadow-sm" style="font-size: 0.9rem;">
-                    <span class="position-absolute top-0 end-0 m-2" onclick="removeFromWishlist(${product.id})" style="z-index: 1;">
-                        <button class="btn wishlist-btn" data-id="${product.id}">
-                            <i class="bi bi-x-lg"></i>
-                        </button>
-                    </span>
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}" style="height: 160px; object-fit: contain;">
-                    <div class="card-body py-2 px-3">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                            <h6 class="card-title mb-1 text-truncate">${product.name}</h6>
-                            <p class="card-text mb-0">$${product.price}</p>
-                            </div>
-                            <button class="btn btn-sm btn-outline-dark ms-2" onclick="moveToCart(${product.id})">
-                            <i class="fas fa-shopping-cart "></i>
-                            </button>
-                        </div>
-                    </div>
+           <div class="col-md-3 mb-3">
+              <div class="card h-100 shadow-sm" style="font-size: 0.9rem;">
+                
+                <!-- Remove Button (Top-Right) -->
+                <span class="position-absolute top-0 end-0 m-2" style="z-index: 1;">
+                  <button class="btn wishlist-btn p-1" onclick="removeFromWishlist(${product.id})">
+                    <i class="bi bi-x-lg"></i>
+                  </button>
+                </span>
+
+                <!-- Product Image -->
+                <img src="${product.image}" class="card-img-top" alt="${product.name}" style="height: 160px; object-fit: contain;">
+                
+                <!-- Card Body -->
+                <div class="card-body py-2 px-3">
+                  
+                  <!-- Product Name -->
+                  <h6 class="card-title mb-1 text-truncate">${product.name}</h6>
+                  
+                  <!-- Price and Cart in Same Row -->
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="card-text mb-0">$${product.price}</p>
+                    <button class="btn btn-sm btn-outline-dark" onclick="moveToCart(${product.id})">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+
                 </div>
+              </div>
             </div>
+
+
 
           `;
         }

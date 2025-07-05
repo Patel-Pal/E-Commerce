@@ -2,109 +2,148 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>TechNova | Home</title>
+  <title>TechNova | Home</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- Custom CSS (Corrected Path: relative to /Home/Home.html) -->
-    <link rel="stylesheet" href="../Header/style.css" />
+  <!-- Custom CSS (Corrected Path: relative to /Home/Home.html) -->
+  <link rel="stylesheet" href="../Header/style.css" />
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-3">
-  <div class="container-fluid">
-    <!-- Brand -->
-    <a class="navbar-brand animate__animated animate__fadeInLeft mx-2" href="#">
-      <strong class="fs-4">TechNova</strong>
-    </a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-3">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand animate__animated animate__fadeInLeft mx-2" href="/Home/Home.html">
+        <strong class="fs-4">TechNova</strong>
+      </a>
 
-    <!-- Toggle button (mobile only) -->
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Desktop Menu -->
-    <div class="d-none d-lg-flex ms-auto">
-      <ul class="navbar-nav">
-        <li class="nav-item px-2">
-          <a class="nav-link animate__animated animate__fadeInDown" href="/Home/Home.html"><i class="fas fa-home me-1"></i> Home</a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link animate__animated animate__fadeInDown" href="/AboutUs/AboutUs.html"><i class="fas fa-info-circle me-1"></i> About Us</a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link animate__animated animate__fadeInDown" href="/ContactUs/ContactUs.html"><i class="fas fa-envelope me-1"></i> Contact Us</a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link animate__animated animate__fadeInDown" href="/Product/products.html"><i class="fas fa-box me-1"></i> Product</a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link d-flex align-items-center gap-2 animate__animated animate__fadeInDown" href="/Product/cart.html">
-            <div class="position-relative">
-              <i class="fas fa-shopping-cart"></i>
-              <span  class=" cartBadge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link d-flex align-items-center gap-2 animate__animated animate__fadeInDown" href="/Product/wishlist.html">
-            <div class="position-relative">
-              <i class="fas fa-heart me-1"></i>
-              <span class=" wishlistBadge  position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link animate__animated animate__fadeInDown" href="/index.html"><i class="fas fa-sign-out-alt me-1"></i> </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Mobile Offcanvas Menu -->
-    <div class="offcanvas offcanvas-start bg-dark text-white d-lg-none" tabindex="-1" id="mobileMenu"
-      aria-labelledby="mobileMenuLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="mobileMenuLabel">TechNova</h5>
-        <button type="button" class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      
+      <!-- Cart & Wishlist Icons for Mobile -->
+      <div class="d-flex d-md-none align-items-center me-2">
+        <a href="/Product/cart.html" class="text-white position-relative me-3">
+          <i class="fas fa-shopping-cart fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cartBadge">
+            1
+          </span>
+        </a>
+        <a href="/Product/wishlist.html" class="text-white position-relative">
+          <i class="fas fa-heart fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger wishlistBadge">
+            1
+          </span>
+        </a>
       </div>
-      <div class="offcanvas-body">
+
+
+      <!-- Toggle button (mobile only) -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="d-none d-lg-flex ms-auto">
         <ul class="navbar-nav">
-          <li class="nav-item px-2"><a class="nav-link text-white" href="/Home/Home.html"><i class="fas fa-home me-1"></i> Home</a></li>
-          <li class="nav-item px-2"><a class="nav-link text-white" href="/AboutUs/AboutUs.html"><i class="fas fa-info-circle me-1"></i> About Us</a></li>
-          <li class="nav-item px-2"><a class="nav-link text-white" href="/ContactUs/ContactUs.html"><i class="fas fa-envelope me-1"></i> Contact Us</a></li>
-          <li class="nav-item px-2"><a class="nav-link text-white" href="/Product/products.html"><i class="fas fa-box me-1"></i> Product</a></li>
-          <li class="nav-item px-2"><a class="nav-link text-white" href="/Product/cart.html"><i class="fas fa-shopping-cart me-1"></i> Cart <span  class=" cartBadge badge bg-danger ms-1">0</span></a></li>
-          <li class="nav-item px-2"><a class="nav-link text-white" href="/Product/wishlist.html"><i class="fas fa-heart me-1"></i> Wishlist <span  class=" wishlistBadge badge bg-danger ms-1">0</span></a></li>
-          <li class="nav-item px-2"><a class="nav-link text-white" href="/index.html"><i class="fas fa-sign-out-alt me-1"></i> Logout</a></li>
+          <li class="nav-item px-2">
+            <a class="nav-link animate__animated animate__fadeInDown" href="/Home/Home.html"><i
+                class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link animate__animated animate__fadeInDown" href="/AboutUs/AboutUs.html"><i
+                class="fas fa-info-circle me-1"></i> About Us</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link animate__animated animate__fadeInDown" href="/ContactUs/ContactUs.html"><i
+                class="fas fa-envelope me-1"></i> Contact Us</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link animate__animated animate__fadeInDown" href="/Product/products.html"><i
+                class="fas fa-box me-1"></i> Product</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link d-flex align-items-center gap-2 animate__animated animate__fadeInDown"
+              href="/Product/cart.html">
+              <div class="position-relative">
+                <i class="fas fa-shopping-cart"></i>
+                <span
+                  class=" cartBadge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link d-flex align-items-center gap-2 animate__animated animate__fadeInDown"
+              href="/Product/wishlist.html">
+              <div class="position-relative">
+                <i class="fas fa-heart me-1"></i>
+                <span
+                  class=" wishlistBadge  position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link animate__animated animate__fadeInDown" href="/index.html"><i
+                class="fas fa-sign-out-alt me-1"></i> </a>
+          </li>
         </ul>
       </div>
+
+      <!-- Mobile Offcanvas Menu -->
+      <div class="offcanvas offcanvas-start bg-dark text-white d-lg-none" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">TechNova</h5>
+          <button type="button" class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item px-2"><a class="nav-link text-white" href="/Home/Home.html"><i
+                  class="fas fa-home me-1"></i> Home</a></li>
+            <li class="nav-item px-2"><a class="nav-link text-white" href="/AboutUs/AboutUs.html"><i
+                  class="fas fa-info-circle me-1"></i> About Us</a></li>
+            <li class="nav-item px-2"><a class="nav-link text-white" href="/ContactUs/ContactUs.html"><i
+                  class="fas fa-envelope me-1"></i> Contact Us</a></li>
+            <li class="nav-item px-2"><a class="nav-link text-white" href="/Product/products.html"><i
+                  class="fas fa-box me-1"></i> Product</a></li>
+            <!-- <li class="nav-item px-2"><a class="nav-link text-white" href="/Product/cart.html"><i
+                  class="fas fa-shopping-cart me-1"></i> Cart <span class=" cartBadge badge bg-danger ms-1">0</span></a>
+            </li>
+            <li class="nav-item px-2"><a class="nav-link text-white" href="/Product/wishlist.html"><i
+                  class="fas fa-heart me-1"></i> Wishlist <span class=" wishlistBadge badge bg-danger ms-1">0</span></a>
+            </li> -->
+            <li class="nav-item px-2"><a class="nav-link text-white" href="/index.html"><i
+                  class="fas fa-sign-out-alt me-1"></i> Logout</a></li>
+          </ul>
+        </div>
+        <!-- Cart and Wishlist icons for mobile view -->
+
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
 
 
-    <!-- jQuery CDN (Load Before Custom Scripts) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- jQuery CDN (Load Before Custom Scripts) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom Script (Corrected path relative to Home.html) -->
-    <script src="../Header/script.js"></script>
+  <!-- Custom Script (Corrected path relative to Home.html) -->
+  <script src="../Header/script.js"></script>
 </body>
 
 </html>
