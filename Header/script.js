@@ -24,7 +24,7 @@ function updateCartBadge() {
     }
   });
 
-  const $badge = $("#cartBadge");
+  const $badge = $(".cartBadge");
   if ($badge.length) {
     $badge.text(totalItems);
     $badge.toggle(totalItems > 0); // Show or hide using jQuery
@@ -35,7 +35,7 @@ function updateWishlistBadge() {
   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
   const count = wishlist.length;
 
-  const $badge = $("#wishlistBadge");
+  const $badge = $(".wishlistBadge");
   if ($badge.length) {
     $badge.text(count);
     $badge.toggle(count > 0);
