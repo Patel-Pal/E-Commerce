@@ -1,32 +1,32 @@
 let rawCart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let cart = rawCart.map(item => {
-  if (typeof item === "number") {
-    return { id: item, qty: 1 };
-  }
-  return item;
+    if (typeof item === "number") {
+        return { id: item, qty: 1 };
+    }
+    return item;
 });
 localStorage.setItem("cart", JSON.stringify(cart));
 
 $.getJSON("data/products.json", function (products) {
-  if (cart.length === 0) {
-    $("#emptyMessage").removeClass("d-none");
-    $(".place-order").attr("disabled", true).css("cursor", "not-allowed");
-    return;
-  }
+    if (cart.length === 0) {
+        $("#emptyMessage").removeClass("d-none");
+        $(".place-order").attr("disabled", true).css("cursor", "not-allowed");
+        return;
+    }
 
-  let total = 0;
-  let itemCount = 0;
-  let html = "";
+    let total = 0;
+    let itemCount = 0;
+    let html = "";
 
-  cart.forEach(item => {
-    const product = products.find(p => p.id == item.id);
-    if (product) {
-      const subtotal = product.price * item.qty;
-      total += subtotal;
-      itemCount += item.qty;
+    cart.forEach(item => {
+        const product = products.find(p => p.id == item.id);
+        if (product) {
+            const subtotal = product.price * item.qty;
+            total += subtotal;
+            itemCount += item.qty;
 
-      html += `
+            html += `
         <div class="d-flex align-items-center mb-3">
           <img src="${product.image}" class="product-img me-3" alt="${product.name}">
           <div>
@@ -37,13 +37,13 @@ $.getJSON("data/products.json", function (products) {
           </div>
         </div>
       `;
-    }
-  });
+        }
+    });
 
-  $("#cartItems").html(html);
-  $("#itemCount").text(itemCount);
+    $("#cartItems").html(html);
+    $("#itemCount").text(itemCount);
 
-  let summaryHtml = `
+    let summaryHtml = `
     <div class="d-flex justify-content-between">
       <span>Subtotal</span>
       <span>$${total.toFixed(2)}</span>
@@ -54,17 +54,17 @@ $.getJSON("data/products.json", function (products) {
     </div>
   `;
 
-  $("#summaryTotal").html(summaryHtml);
+    $("#summaryTotal").html(summaryHtml);
 });
 
 // Enable "PLACE ORDER" only if email is added
 $("input[type=email]").on("input", function () {
-  const email = $(this).val().trim();
-  if (email && cart.length > 0) {
-    $(".place-order").removeAttr("disabled").css("cursor", "pointer");
-  } else {
-    $(".place-order").attr("disabled", true).css("cursor", "not-allowed");
-  }
+    const email = $(this).val().trim();
+    if (email && cart.length > 0) {
+        $(".place-order").removeAttr("disabled").css("cursor", "pointer");
+    } else {
+        $(".place-order").attr("disabled", true).css("cursor", "not-allowed");
+    }
 });
 
 
@@ -77,65 +77,65 @@ $("#fullName").val(currentUser); // autofill
 // When Place Order button clicked
 $(".place-order").on("click", function () {
 
-  const name = $("#fullName").val().trim();
-  const phone = $("#phone").val().trim();
-  const city = $("#city").val().trim();
-  const email = $("#email").val().trim();
+    const name = $("#fullName").val().trim();
+    const phone = $("#phone").val().trim();
+    const city = $("#city").val().trim();
+    const email = $("#email").val().trim();
 
-  // Clear previous error messages
-  $("#nameError, #phoneError, #cityError, #emailError").text("");
+    // Clear previous error messages
+    $("#nameError, #phoneError, #cityError, #emailError").text("");
 
-  // Regex Patterns
-  const namePattern = /^[a-zA-Z\s]{3,}$/;
-  const phonePattern = /^\d{10}$/;
-  const cityPattern = /^[a-zA-Z\s]{3,}$/;
-  const emailPattern = /^[a-z0-9]+@+[a-z]+\.+[a-z]{2,3}$/;
+    // Regex Patterns
+    const namePattern = /^[a-zA-Z\s]{3,}$/;
+    const phonePattern = /^\d{10}$/;
+    const cityPattern = /^[a-zA-Z\s]{3,}$/;
+    const emailPattern = /^[a-z0-9]+@+[a-z]+\.+[a-z]{2,3}$/;
 
-  if (!namePattern.test(name)) {
-    $("#nameError").text("Please enter a valid name (min 3 letters).");
-    return
-  }
+    if (!namePattern.test(name)) {
+        $("#nameError").text("Please enter a valid name (min 3 letters).");
+        return
+    }
 
-  if (!phonePattern.test(phone)) {
-    $("#phoneError").text("Please enter a valid 10-digit phone number.");
-    return
-  }
+    if (!phonePattern.test(phone)) {
+        $("#phoneError").text("Please enter a valid 10-digit phone number.");
+        return
+    }
 
-  if (!cityPattern.test(city)) {
-    $("#cityError").text("Enter a valid city name.");
-    return
-  }
+    if (!cityPattern.test(city)) {
+        $("#cityError").text("Enter a valid city name.");
+        return
+    }
 
-  if (!emailPattern.test(email)) {
-    $("#emailError").text("Enter a valid email address.");
-    return
-  }
+    if (!emailPattern.test(email)) {
+        $("#emailError").text("Enter a valid email address.");
+        return
+    }
+
+    
 
 
 
+    const userInfo = { name, phone, city, email };
+    const paymentMethod = "Cash on Delivery";
 
+    // Load cart & product data
+    const rawCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const userInfo = { name, phone, city, email };
-  const paymentMethod = "Cash on Delivery";
+    $.getJSON("data/products.json", function (products) {
+        let cart = rawCart.map(item =>
+            typeof item === "number" ? { id: item, qty: 1 } : item
+        );
 
-  // Load cart & product data
-  const rawCart = JSON.parse(localStorage.getItem("cart")) || [];
+        let total = 0;
+        let itemsHtml = "";
 
-  $.getJSON("data/products.json", function (products) {
-    let cart = rawCart.map(item =>
-      typeof item === "number" ? { id: item, qty: 1 } : item
-    );
+        cart.forEach(item => {
+            const product = products.find(p => p.id == item.id);
+            if (product) {
+                const sub = product.price * item.qty;
+                total += sub;
 
-    let total = 0;
-    let itemsHtml = "";
-
-    cart.forEach(item => {
-      const product = products.find(p => p.id == item.id);
-      if (product) {
-        const sub = product.price * item.qty;
-        total += sub;
-
-        itemsHtml += `
+                itemsHtml += `
           <tr>
             <td>${product.name}</td>
             <td>${item.qty}</td>
@@ -143,10 +143,10 @@ $(".place-order").on("click", function () {
             <td>$${sub.toFixed(2)}</td>
           </tr>
         `;
-      }
-    });
+            }
+        });
 
-    const billHTML = `
+        const billHTML = `
       <h6><strong>Customer Info</strong></h6>
       <p>Name: ${userInfo.name}<br>
          Email: ${userInfo.email}<br>
@@ -168,42 +168,25 @@ $(".place-order").on("click", function () {
       </div>
     `;
 
-    $("#billContent").html(billHTML);
-    const billModal = new bootstrap.Modal(document.getElementById("billModal"));
-    billModal.show();
-  });
+        $("#billContent").html(billHTML);
+        const billModal = new bootstrap.Modal(document.getElementById("billModal"));
+        billModal.show();
+    });
 
 
 });
 
 
 const confettiCanvas = document.getElementById('confetti-canvas');
-const myConfetti = confetti.create(confettiCanvas, {
-  resize: true,
-  useWorker: true,
-});
+            const myConfetti = confetti.create(confettiCanvas, {
+                resize: true,
+                useWorker: true,
+            });
 
 $("#confirmOrderBtn").on("click", function () {
-  // Clear cart from localStorage
-  localStorage.removeItem("cart");
-
-  // Redirect to product page
-  window.location.href = "products.html";
-
-  // Fire from the center of the screen
-  myConfetti({
-    particleCount: 150,
-    spread: 80,
-    origin: {
-      x: 0.5,
-      y: 0.5
-    }
-  });
-  // Optionally close the modal after some time
-  setTimeout(() => {
-    $('#billModal').modal('hide');
-  }, 1500);
-
-
-
+    // Clear cart from localStorage
+    localStorage.removeItem("cart");
+  
+    // Redirect to product page
+    window.location.href = "products.html";
 });
