@@ -179,7 +179,7 @@ $(".place-order").on("click", function () {
 $("#confirmOrderBtn").on("click", function () {
     // Clear cart from localStorage
     localStorage.removeItem("cart");
-
+  
     // Redirect to product page
     window.location.href = "products.html";
 });

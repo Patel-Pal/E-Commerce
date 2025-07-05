@@ -9,10 +9,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
-    /* #container{
-      height: 100vh;
-      
-    } */
     html,
     body {
       height: 100%;
@@ -26,7 +22,6 @@
 
     #container {
       flex: 1;
-      /* take remaining space */
     }
   </style>
 </head>
@@ -36,11 +31,16 @@
   <div id="header" class="sticky-top"></div>
 
   <div class="px-5 py-5 bg-light h-70" id="container">
-    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">
-            Your Wishlist
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown ">
+             Wishlist
           </h1>
     <div id="wishlistItems" class="row g-4"></div>
-    <div id="emptyWishlist" class="text-center text-muted" style="display:none;">Your wishlist is empty.</div>
+    <div id="emptyWishlist" class="text-center text-muted my-4" style="display:none;">
+      <h1>
+        <i class="bi bi-heart"></i>
+      </h1>
+      Your wishlist is empty.
+    </div>
 
   </div>
 

@@ -48,3 +48,21 @@
         width: 100% !important;
     }
 }
+
+  /* Responsive adjustments for toast */
+    @media (max-width: 576px) {
+      .toast-container {
+        padding: 1rem !important;
+      }
+
+      .toast {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (min-width: 577px) {
+      .toast {
+        width: 350px;
+      }
+    }
