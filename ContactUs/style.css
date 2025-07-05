@@ -1,0 +1,50 @@
+ .contact-section {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+
+    .form-control-lg {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      .display-4 {
+        font-size: 2.5rem;
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
+
+      .form-control-lg {
+        font-size: 0.9rem;
+      }
+
+      .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+      }
+
+      .form-label {
+        font-size: 0.9rem;
+      }
+
+      .border {
+        padding: 1.5rem !important;
+      }
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+      .display-4 {
+        font-size: 3rem;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+      }
+
+      .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 2rem;
+      }
+    }

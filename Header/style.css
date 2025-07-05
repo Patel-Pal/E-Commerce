@@ -36,3 +36,27 @@
     /* color: #f8f2f2; */
   /* } */
 /* } */
+
+#cartBadge {
+  font-size: 0.65rem;
+  padding: 2px 5px;
+  line-height: 1;
+}
+#wishlistBadge {
+  font-size: 0.65rem;
+  padding: 2px 5px;
+  line-height: 1;
+}
+
+@media (max-width: 576px) {
+  #cartBadge {
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #wishlistBadge {
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

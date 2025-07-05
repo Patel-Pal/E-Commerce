@@ -103,20 +103,29 @@ $(document).ready(function () {
             const isInWishlist = wishlist.includes(product.id);
             html += `
             <div class="col-6 col-md-3 mb-3 cards">
-                <div class="card h-100 position-relative p-2">
-                    <span class="position-absolute top-0 end-0 m-1" style="z-index: 1;">
-                    <button class="btn wishlist-btn border-0 p-0" data-id="${product.id}">
+                <div class="card h-100 position-relative d-flex flex-column">
+                    <span class="position-absolute top-0 end-0 m-1 " style="z-index: 1;">
+                    <button class="btn wishlist-btn border-0 p-1" data-id="${product.id}">
                         <i class="bi ${isInWishlist ? 'bi-heart-fill' : 'bi-heart'} fs-5 text-danger"></i>
                     </button>
                     </span>
+
+                    <!-- Product Image -->
                     <img src="${product.image}" class="card-img-top" alt="${product.name}" style="height: 150px; object-fit: contain;">
-                    <div class="card-body p-2">
-                    <h6 class="card-title mb-1">${product.name}</h6>
-                    <p class="card-text mb-2 small">$${product.price}</p>
-                    <a href="product-detail.html?id=${product.id}" class="btn btn-outline-dark btn-sm w-100">View</a>
+
+                    <!-- Card Body -->
+                    <div class="card-body d-flex flex-column justify-content-between p-2 flex-grow-1">
+                    <div>
+                        <h6 class="card-title mb-1 text-truncate">${product.name}</h6>
+                        <p class="card-text mb-2 small">$${product.price}</p>
                     </div>
+
+                    <!-- Stable View Button -->
+                    <a href="product-detail.html?id=${product.id}" class="btn btn-outline-dark btn-sm w-100 mt-auto">View</a>
                 </div>
             </div>
+            </div>
+
 
         `;
         });

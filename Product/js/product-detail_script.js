@@ -22,8 +22,8 @@ $.getJSON("data/products.json", function (products) {
                                     <p class="text-muted">Category: ${product.category}</p>
                                     <p class="mt-3">${product.description}</p>
                                 <div class="d-flex gap-3 mt-4">
-                                <button class="btn btn-secondary" onclick="addToCart(${product.id})">Add to Cart</button>
-                                <button class="btn btn-outline-dark" onclick="addToWishlist(${product.id})">Add to Wishlist</button>
+                                <button class="btn btn-outline-dark " onclick="addToCart(${product.id})">Add to Cart</button>
+                                <button class="btn btn-secondary" onclick="addToWishlist(${product.id})">Add to Wishlist</button>
                             </div>
                         </div>
                     </div>

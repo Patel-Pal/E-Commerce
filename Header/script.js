@@ -3,11 +3,11 @@ $(document).ready(function () {
   updateWishlistBadge();
 
 
- $(".navbar-nav .nav-link").on("click", function () {
-    if ($(".navbar-toggler").is(":visible")) {
-      $("#abc").collapse("hide");
-    }
-  });
+//  $(".navbar-nav .nav-link").on("click", function () {
+//     if ($(".navbar-toggler").is(":visible")) {
+//       $("#abc").collapse("hide");
+//     }
+//   });
 
 });
 
