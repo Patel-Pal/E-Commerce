@@ -53,17 +53,21 @@
     });
 
     function removeFromWishlist(id) {
-      wishlist = wishlist.filter(item => item != id);
-      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      // wishlist = wishlist.filter(item => item != id);
+      // localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      
+      removeFromWishlista(id);
       location.reload();
 
       // updateWishlistBadge();
     }
 
     function moveToCart(id) {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      if (!cart.includes(id)) cart.push(id);
-      localStorage.setItem("cart", JSON.stringify(cart));
+      // let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      // if (!cart.includes(id)) cart.push(id);
+      // localStorage.setItem("cart", JSON.stringify(cart));
+
+      addToCart(id);
       removeFromWishlist(id);
       location.reload()
       // updateCartBadge();

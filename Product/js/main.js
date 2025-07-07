@@ -156,24 +156,32 @@ $(document).ready(function () {
 
         // Attach wishlist button click
         $(".wishlist-btn").off("click").on("click", function () {
+            // const id = parseInt($(this).data("id"));
+            // let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            // if (wishlist.includes(id)) {
+            //     wishlist = wishlist.filter(item => item !== id);
+            // } else {
+            //     wishlist.push(id);
+            // }
+            // localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            // renderProducts(category, keyword, currentPage); // Keep current page
+            // location.reload()
+
             const id = parseInt($(this).data("id"));
-            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            let wishlist = getStorage("wishlist");
 
             if (wishlist.includes(id)) {
-                wishlist = wishlist.filter(item => item !== id);
+                removeFromWishlista(id); // from utils
             } else {
-                wishlist.push(id);
+                addToWishlist(id); // from utils
             }
 
-            localStorage.setItem("wishlist", JSON.stringify(wishlist));
-            renderProducts(category, keyword, currentPage); // Keep current page
-
-            // console.log("Wishlist:", localStorage.getItem("wishlist"));
-            // updateWishlistBadge();
-
-            location.reload()
+            renderProducts(category, keyword, currentPage);
 
         });
+
+
     }
 
 
