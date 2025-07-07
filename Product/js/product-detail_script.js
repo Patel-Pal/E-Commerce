@@ -41,6 +41,8 @@ function addToCart(id) {
     // showMessage("Product added to cart!");
 
     location.reload()
+
+    // updateCartBadge();
 }
 
 // Add to Wishlist
@@ -50,6 +52,8 @@ function addToWishlist(id) {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
     // showMessage("Product added to wishlist!");
     location.reload()
+    // console.log("Wishlist:", localStorage.getItem("wishlist"));
+    // updateWishlistBadge();
 
 }
 

@@ -146,27 +146,37 @@ $(".place-order").on("click", function () {
             }
         });
 
-        const billHTML = `
-      <h6><strong>Customer Info</strong></h6>
-      <p>Name: ${userInfo.name}<br>
-         Email: ${userInfo.email}<br>
-         Phone: ${userInfo.phone}<br>
-         Address: ${userInfo.city}</p>
-      <hr>
+       const billHTML = `
+  <h6><strong>Customer Info</strong></h6>
+  <p>Name: ${userInfo.name}<br>
+     Email: ${userInfo.email}<br>
+     Phone: ${userInfo.phone}<br>
+     Address: ${userInfo.city}</p>
+  <hr>
 
-      <h6><strong>Items</strong></h6>
-      <table class="table table-bordered">
-        <thead><tr><th>Product</th><th>Qty</th><th>Price</th><th>Subtotal</th></tr></thead>
-        <tbody>${itemsHtml}</tbody>
-      </table>
+  <h6><strong>Items</strong></h6>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>${itemsHtml}</tbody>
+    </table>
+  </div>
 
-      <div class="d-flex justify-content-between">
-        <strong>Total:</strong> <strong>$${total.toFixed(2)}</strong>
-      </div>
-      <div class="mt-2">
-        <strong>Payment:</strong> ${paymentMethod}
-      </div>
-    `;
+  <div class="d-flex justify-content-between">
+    <strong>Total:</strong> <strong>$${total.toFixed(2)}</strong>
+  </div>
+  <div class="mt-2">
+    <strong>Payment:</strong> ${paymentMethod}
+  </div>
+`;
+
 
         $("#billContent").html(billHTML);
         const billModal = new bootstrap.Modal(document.getElementById("billModal"));

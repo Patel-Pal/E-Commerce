@@ -56,6 +56,8 @@
       wishlist = wishlist.filter(item => item != id);
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
       location.reload();
+
+      // updateWishlistBadge();
     }
 
     function moveToCart(id) {
@@ -63,4 +65,6 @@
       if (!cart.includes(id)) cart.push(id);
       localStorage.setItem("cart", JSON.stringify(cart));
       removeFromWishlist(id);
+      location.reload()
+      // updateCartBadge();
     }

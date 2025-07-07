@@ -168,6 +168,9 @@ $(document).ready(function () {
             localStorage.setItem("wishlist", JSON.stringify(wishlist));
             renderProducts(category, keyword, currentPage); // Keep current page
 
+            // console.log("Wishlist:", localStorage.getItem("wishlist"));
+            // updateWishlistBadge();
+
             location.reload()
 
         });

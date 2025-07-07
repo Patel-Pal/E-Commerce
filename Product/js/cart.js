@@ -92,26 +92,15 @@ let rawCart = JSON.parse(localStorage.getItem("cart")) || [];
     // $("#cartItems").html(html);
   });
   
- // Initialize Bootstrap toast for remove from cart
-    const removeToastEl = document.getElementById('cardtoast');
-    const removeToast = new bootstrap.Toast(removeToastEl, {
-        autohide: true,
-        delay: 1000
-    });
-
-    function removeFromCart(id) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        if (cart.some(item => item.id === id)) {
-            cart = cart.filter(item => item.id !== id);
-            localStorage.setItem("cart", JSON.stringify(cart));
-            $("#toastMessage").text("Product removed from cart!");
-            removeToast.show();
-        } else {
-            $("#toastMessage").text("Product not found in cart!");
-            removeToast.show();
-        }
-        location.reload();
+ //  remove from cart
+   function removeFromCart(id) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.some(item => item.id === id)) {
+        cart = cart.filter(item => item.id !== id);
+        localStorage.setItem("cart", JSON.stringify(cart));
     }
+    location.reload();
+}
 
 function updateQuantity(id, action) {
   cart = cart.map(item => {
